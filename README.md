@@ -1,4 +1,7 @@
-# visualizing Quakes
+# Visualizing Earthquakes
+...
+
+# Packages used
 Analyzing Puerto Rico's Earthquake Activity
 
 ```pip install folium
