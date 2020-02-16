@@ -10,6 +10,6 @@ pip install jupyter-lab
 ```
 
 # Example of use
-![Code](https://imgur.com/AYAyX6X)
+![Imgur](https://imgur.com/AYAyX6X)
 ![Map](https://imgur.com/ze3e7eA)
 ![Circle Marker](https://imgur.com/r74Mzya)
