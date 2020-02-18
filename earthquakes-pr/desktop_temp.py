@@ -1,25 +1,27 @@
 import folium
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+
+coor = []
 
 
-
-pr = folium.Map(location=[18.2208, -66.5901],
-        zoom_start=9,
-        tiles='cartodbdark_matter'
-        )
-
-
-df = pd.read_csv('query45.csv', 
-                usecols=['latitude', 'longitude','place', 'mag'],
-                )
+def base_map(default_location=[18.2208, -66.5901], default_zoom=9):
+    pr = folium.Map(location=default_location,
+                    control_scale=True,
+                    zoom_start=default_zoom,
+                    tiles='cartodbdark_matter'
+                    )
+    return pr
 
 
-def plot(point):
-    lat = []
-    lon = []
+def read_data():
+    df = pd.read_csv('query45.csv', 
+                    usecols=['latitude', 'longitude','place', 'mag']
+                     )
 
     for i, row in df.iterrows():
-        lat.append(row[i]['latitude']), lon.append(row[i]['longitude'])
-        folium.CircleMarker(location=[point.lat, point.lon], radius=2).add_to(pr)
+        coor.append(row['latitude']), coor.append(row['longitude'])
+        print(coor)
+
+if __name__ == '__main__':
+    read_data()
