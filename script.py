@@ -15,7 +15,7 @@ def base_map(default_location=[18.2208, -66.5901], default_zoom=9):
 
 
 def read_data():
-    df = pd.read_csv('query45.csv', 
+    df = pd.read_csv('D:/Projects/earthquakes-pr/earthquakes-pr/query45.csv', 
                     usecols=['latitude', 'longitude','place', 'mag']
                      )
 
